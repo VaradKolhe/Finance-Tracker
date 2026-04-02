@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AiBudgetSpendingAnalyzer.API/AiBudgetSpendingAnalyzer.API.csproj" />
+    <Project Path="src/AiBudgetSpendingAnalyzer.Application/AiBudgetSpendingAnalyzer.Application.csproj" />
+    <Project Path="src/AiBudgetSpendingAnalyzer.Domain/AiBudgetSpendingAnalyzer.Domain.csproj" />
+    <Project Path="src/AiBudgetSpendingAnalyzer.Infrastructure/AiBudgetSpendingAnalyzer.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AiBudgetSpendingAnalyzer.Application.Tests/AiBudgetSpendingAnalyzer.Application.Tests.csproj" />
+  </Folder>
+</Solution>

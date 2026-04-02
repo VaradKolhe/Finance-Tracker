@@ -1,0 +1,27 @@
+# Root
+.runlogs/
+.vscode/
+.idea/
+*.log
+*.tmp
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# .NET
+**/bin/
+**/obj/
+**/.vs/
+**/TestResults/
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.vite/
+
+# Coverage / reports
+coverage/

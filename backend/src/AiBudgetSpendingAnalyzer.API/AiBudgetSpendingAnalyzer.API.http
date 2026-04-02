@@ -1,0 +1,51 @@
+@host = http://localhost:5067
+@email = admin@budgetai.local
+@password = Admin@12345
+@token = replace-after-login
+
+### Register a normal user
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Ava",
+  "lastName": "Patel",
+  "email": "ava@example.com",
+  "password": "Budget@123",
+  "monthlyIncome": 5000,
+  "financialGoal": "Build an emergency fund",
+  "currencyCode": "USD",
+  "prefersDarkMode": false
+}
+
+### Login
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}"
+}
+
+### Dashboard
+GET {{host}}/api/dashboard
+Authorization: Bearer {{token}}
+
+### Transactions
+GET {{host}}/api/transactions
+Authorization: Bearer {{token}}
+
+### AI Analysis
+GET {{host}}/api/ai-analysis
+Authorization: Bearer {{token}}
+
+### Reports
+POST {{host}}/api/reports/generate
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "period": "monthly",
+  "fromUtc": null,
+  "toUtc": null
+}
