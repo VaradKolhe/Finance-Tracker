@@ -98,12 +98,15 @@ public class Program
 
         app.UseSerilogRequestLogging();
         app.UseMiddleware<ExceptionHandlingMiddleware>();
+        app.UseDefaultFiles();
+        app.UseStaticFiles();
         app.UseSwagger();
         app.UseSwaggerUI();
         app.UseCors("Default");
         app.UseAuthentication();
         app.UseAuthorization();
         app.MapControllers();
+        app.MapFallbackToFile("index.html");
 
         await app.RunAsync();
     }
